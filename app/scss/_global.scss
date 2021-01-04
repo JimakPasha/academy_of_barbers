@@ -1,0 +1,19 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  background-color: #fff;
+  color: $default;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.6px;
+  @extend %raleway-300;
+}
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

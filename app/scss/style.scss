@@ -176,6 +176,7 @@
 
 .price{
   padding-top: 100px;
+  margin-bottom: 175px;
   &__title{
     margin-bottom: 56px;
   }
@@ -234,6 +235,84 @@
   }
 }
 
+.connection{
+  background-color: #FCFAF7;
+  padding: 95px 0 178px;
+  border: 1px solid rgba(152, 144, 132, 0.5);
+  &__title{
+    margin-bottom: 23px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: center;
+  }
+}
 
+.form{
+  max-width: 400px;
+  margin-right: 20px;
+  position: relative;
+  & input{
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 9px 0;
+    margin-bottom: 32px;
+    color: #331C00;
+    @extend %cormorantunicase-600;
+    background-color: #FCFAF7;
+  }
+  & button{
+    background-color: #fff;
+    @extend %cormorantunicase-400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2D201A;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 12px 29px 8px;
+    position: absolute;
+    right: 0;
+    transform: translateX(55%);
+    bottom: -92px;
+  }
+}
+
+.contacts{
+  @extend %cormorantunicase-600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #242121;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  max-width: 390px;
+  &__inner{
+    background-image: url(../images/logo-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 37%;
+    background-position: 96% 42%;
+    padding: 28px 65px 28px 36px;
+    border: 1px solid rgba(152, 144, 132, 0.5);
+    background-color: #F1E9DE;
+  }
+  &__title{
+    margin-bottom: 26px;
+  }
+  &__title span,
+  &__phone span{
+  @extend %cormorantunicase-500;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.phone{
+  display: block;
+  color: #242121;
+  margin-bottom: 26px;
+}
 
 @import 'media';

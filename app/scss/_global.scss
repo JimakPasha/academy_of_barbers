@@ -17,3 +17,15 @@ body{
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.title{
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  @extend %cormorantunicase-600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

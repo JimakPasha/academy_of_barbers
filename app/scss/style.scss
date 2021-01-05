@@ -40,6 +40,7 @@
     color: #DDCDB4;
     border: 1px solid #DDCDB4;
     background: rgba(0, 0, 0, 0.4);
+    display: none;
   }
 }
 
@@ -64,12 +65,13 @@
 
 .about{
   padding-top: 110px;
-  background-image: url(../images/logo-bg-about-our-teachers.svg);
+  background-image: url(../images/logo-bg.svg);
   background-repeat: no-repeat;
   background-size: 34%;
   background-position: center center;
   background-color: #FAF7F2;
   color: #000;
+  border-bottom: 1px solid rgba(152, 144, 132, 0.5);
   &__title{
     @extend %cormorantunicase-400;
     font-size: 64px;
@@ -108,7 +110,51 @@
     max-width: 815px;
     margin: 0 auto;
     padding-bottom: 40px;
-    border-bottom: 0.5px solid rgba(152, 144, 132, 0.5);
+  }
+}
+
+.teachers{
+  padding-top: 130px;
+  &__title{
+    margin-bottom: 63px;
+  }
+  &__content{
+    margin-left: 8%;
+    margin-bottom: 142px;
+    background-image: url(../images/logo-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 34%;
+    background-position: 87% 5%;
+  }
+  &__item{
+    display: flex;
+  }
+  &__item--2{
+    margin-top: -75px;
+  }
+  &__item-img{
+    margin: 0 63px 0 30px;
+    max-width: 335px;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__content-box{
+    max-width: 395px;
+    margin-top: 40px;
+  }
+  &__content-box--2{
+    text-align: right;
+    margin-top: 150px;
+  }
+  &__content-title{
+    @extend %cormorantunicase-600;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__content-text + .teachers__content-text{
+    margin-top: 15px;
   }
 }
 

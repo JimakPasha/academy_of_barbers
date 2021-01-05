@@ -62,4 +62,56 @@
   }
 }
 
+.about{
+  padding-top: 110px;
+  background-image: url(../images/logo-bg-about-our-teachers.svg);
+  background-repeat: no-repeat;
+  background-size: 34%;
+  background-position: center center;
+  background-color: #FAF7F2;
+  color: #000;
+  &__title{
+    @extend %cormorantunicase-400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+  }
+  &__subtitle{
+    @extend %raleway-400;
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 77px;
+    text-align: center;
+  }
+  &__content{
+    max-width: 950px;
+    margin: 0 auto 76px;
+  }
+  &__content-text{
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 463px;
+    margin-top: -27px;
+    &:nth-child(odd){
+      text-align: right;
+    }
+    &:nth-child(even){
+      text-align: left;
+      margin-left: 53%;
+    }
+  }
+  &__slogan{
+    @extend %cormorantunicase-300;
+    text-align: center;
+    font-size: 48px;
+    line-height: 51px;
+    max-width: 815px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 0.5px solid rgba(152, 144, 132, 0.5);
+  }
+}
+
+
+
 @import 'media';

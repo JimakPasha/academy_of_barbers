@@ -158,6 +158,22 @@
   }
 }
 
+.blockquote{
+  background-color: #FAF7F2;
+  text-align: center;
+  padding: 48px 0;
+  @extend %cormorantunicase-300;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  &__author{
+    display: block;
+    @extend %raleway-200;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 
 
 @import 'media';

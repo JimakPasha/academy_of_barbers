@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -313,6 +314,70 @@
   display: block;
   color: #242121;
   margin-bottom: 26px;
+}
+
+.container-slider{
+  max-width: 1277px;
+  margin: 0 auto;
+}
+
+.reviews-slider{
+  padding-top: 100px;
+  margin-bottom: 125px;
+  &__title{
+    margin-bottom: 67px;
+  }
+  &__item{
+    padding-top: 60px;
+    height: 507px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__content{
+    max-width: 359px;
+    padding: 33px 39px 66px;
+    background-color: rgba(0, 0, 0, 0.71);
+    color: #fff;
+    margin: 0 87px 0 auto;
+  }
+  &__author{
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    @extend %cormorantunicase-600;
+    margin-bottom: 22px;
+  }
+  &__text{
+    display: block;
+    & + .reviews-slider__text{
+      margin-top: 23px;
+    }
+  }
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  li{
+    padding: 15px 8px;
+    line-height: 0;
+    button{
+      padding: 0;
+      font-size: 0;
+      background-color: rgba(166, 153, 133, 0.2);
+      width: 11px;
+      height: 11px;
+      border: 1px solid #242121;
+      border-radius: 50%;
+    }
+    &.slick-active{
+      button{
+        background-color: #242121;
+        border: none;
+      }
+    }
+  }
 }
 
 @import 'media';

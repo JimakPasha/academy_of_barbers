@@ -46,6 +46,7 @@
 }
 
 .logo{
+  outline: none;
   margin: 0 234px 0 10px;
 }
 
@@ -53,14 +54,25 @@
   &__list{
     display: flex;
   }
+  &__list-item{
+    padding: 0 6px;
+    transition: all .3s;
+    &:hover{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+  }
   &__list-item + .menu__list-item{
-    margin-left: 45px;
+    margin-left: 33px;
   }
   &__list-link{
     @extend %raleway-400;
     font-size: 24px;
     line-height: 28px;
     color: #fff;
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
   }
 }
 
@@ -189,7 +201,7 @@
     transition: all .3s;
     padding: 30px 20px 35px;
     &:hover{
-      transform: translateY(5%);
+      transform: scale(1.1);
       border: 1px solid rgba(0, 0, 0, 0.5);
     }
   }
@@ -263,6 +275,10 @@
     color: #331C00;
     @extend %cormorantunicase-600;
     background-color: #FCFAF7;
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
   }
   & button{
     background-color: #fff;
@@ -278,6 +294,12 @@
     right: 0;
     transform: translateX(55%);
     bottom: -92px;
+    transition: all .3s;
+    &:hover,
+    &:focus{
+      outline: none;
+      background-color: #F1E9DE;
+    }
   }
 }
 
@@ -304,7 +326,7 @@
   }
   &__title span,
   &__phone span{
-  @extend %cormorantunicase-500;
+    @extend %cormorantunicase-500;
     font-size: 24px;
     line-height: 30px;
   }
@@ -314,6 +336,10 @@
   display: block;
   color: #242121;
   margin-bottom: 26px;
+  &:focus{
+    outline: none;
+    color: rgba(36,33,33,0.6);
+  }
 }
 
 .container-slider{
@@ -375,7 +401,91 @@
       button{
         background-color: #242121;
         border: none;
+        &:focus{
+        outline: none;
+        background-color: rgba(36,33,33,0.8);
       }
+      }
+    }
+  }
+}
+
+.footer{
+  background-image: url(../images/logo-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: center center;
+  padding: 38px 0 46px;
+  background-color: #242121;
+  &__inner{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__contacts,
+  &__phone,
+  &__address{
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.6);
+    @extend %cormorantunicase-600;
+  }
+  &__phone{
+    display: block;
+    margin-bottom: 21px;
+    &:focus{
+      outline: none;
+      color: rgba(250, 247, 242, 0.9);
+    }
+  }
+}
+
+.footer-menu{
+  &__list{
+    display: flex;
+    justify-content: center;
+    @extend %cormorantunicase-600;
+  }
+  &__list-item +.footer-menu__list-item{
+    margin-left: 80px;
+  }
+  &__list-link{
+    padding: 0 3px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.6);
+    @extend %cormorantunicase-600;
+    &:hover,
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid rgba(250, 247, 242, 0.6);
+    }
+  }
+}
+
+.social{
+  &__facebook:hover,
+  &__facebook:focus{
+    outline: none;
+    ellipse{
+      transition: all .3s;
+      fill: #4E6297;
+    }
+  }
+  &__vk:hover,
+  &__vk:focus{
+    outline: none;
+    ellipse{
+      transition: all .3s;
+      fill: #7294C7;
+    }
+  }
+  &__instagram:hover,
+  &__instagram:focus{
+    outline: none;
+    ellipse{
+      fill: url(#paint0_linear);
     }
   }
 }

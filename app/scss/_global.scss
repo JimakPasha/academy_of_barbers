@@ -1,0 +1,31 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  background-color: #fff;
+  color: $default;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.6px;
+  @extend %raleway-300;
+}
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title{
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  @extend %cormorantunicase-600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

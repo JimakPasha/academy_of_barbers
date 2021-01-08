@@ -184,6 +184,8 @@
   text-transform: uppercase;
   font-size: 30px;
   line-height: 36px;
+  border-bottom: 1px solid rgba(152, 144, 132, 0.5);
+  border-top: 1px solid rgba(152, 144, 132, 0.5);
   &__author{
     display: block;
     @extend %raleway-200;
@@ -203,6 +205,7 @@
     justify-content: space-around;
   }
   &__item{
+    display: block;
     transition: all .3s;
     text-align: center;
     background-color: #FCFAF7;
@@ -211,7 +214,9 @@
     border: 1px solid rgba(152, 144, 132, 0.5);
     border-top: none;
     position: relative;
-    &:hover{
+    outline: none;
+    &:hover,
+    &:focus{
       transform: scale(1.1);
       box-shadow: 0px 0px 18px -8px #000000;
     }
@@ -250,6 +255,7 @@
     bottom: 20px;
     right: 50%;
     transform: translateX(50%);
+    color: $default;
   }
 }
 

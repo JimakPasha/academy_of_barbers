@@ -10,13 +10,41 @@
   .menu{
     margin-right: 15px;
   }
+  .about{
+    &__content-text{
+      margin-top: 10px;
+    }
+    &__content-text:nth-child(even) {
+      margin-left: auto;
+    }
+  }
 }
 
 @media (max-width: 768px){
   .header{
+    &__top{
+    padding: 15px 0 0;
+    }
+    &__content-inner{
+      align-items: center;
+    }
     &__content-inner.active{
       opacity: 0; 
       pointer-events: none;
+    }
+    &__content-title{
+      text-align: center;
+      margin-left: 0;
+      font-size: 60px;
+      line-height: 82px;
+      letter-spacing: 2px;
+      max-width: 677px;
+    }
+    &__content-link{
+      max-width: 280px;
+      padding: 12px 24px;
+      font-size: 30px;
+      line-height: 32px;
     }
   }
   .menu{
@@ -29,6 +57,7 @@
       border: none;
       padding: 0;
       background-color: transparent;
+      transition: all .3s;
       &::before,
       &::after{
         position: absolute;
@@ -52,6 +81,11 @@
         background-color: #fff;
         transition: all .3s;
         position: relative;
+      }
+      &:hover,
+      &:focus{
+        outline: none;
+        transform: scale(1.1);
       }
     }
     &__btn.active{
@@ -79,7 +113,7 @@
       background-color: #774E36;
       z-index: 5;
       transform: translateY(-200%) scale(0);
-      transition: all .2s;
+      transition: all .3s;
       &.active{
       transform: translateY(0%) scale(1);
       }
@@ -96,6 +130,68 @@
         border-bottom: none;
         transform: scale(1.1);
       }
+    }
+  }
+  .about{
+    padding-top: 60px;
+    &__content-text{
+      margin-top: 20px;
+    }
+    &__title{
+      font-size: 52px;
+      line-height: 56px;
+    }
+    &__subtitle{
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    &__content{
+      margin-bottom: 60px;
+    }
+    &__slogan{
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+  .teachers{
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 600px){
+  .about{
+    &__content-text:nth-child(odd),
+    &__content-text:nth-child(even){
+      text-align: center;
+    }
+    &__title{
+      max-width: 461px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 490px){
+  .header{
+    &__content-title{
+      font-size: 48px;
+      line-height: 62px;
+    }
+    &__content-link{
+      padding: 10px 21px;
+      font-size: 27px;
+      line-height: 29px;
+    }
+  }
+  .about{
+    &__content-text{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__slogan{
+      font-size: 27px;
+      line-height: 32px;
     }
   }
 }

@@ -18,6 +18,25 @@
       margin-left: auto;
     }
   }
+  .teachers{
+    &__item--2{
+      margin-top: 30px;
+    }
+    &__item-img{
+      margin: 0;
+    }    
+    &__item-img--1{
+      margin-right: 20px;
+    }
+    &__item-img--2{
+      margin-left: 20px;
+    }
+  }
+  .price{
+    &__item +.price__item{
+      margin-left: 20px;
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -156,6 +175,48 @@
   }
   .teachers{
     padding-top: 60px;
+    &__content{
+      margin-left: 0;
+      margin-bottom: 100px;
+    } 
+    &__content-box--2{
+      margin-top: 40px;
+    }
+    &__item{
+      margin-left: 0;
+    }    
+    &__item-img{
+      width: 50%;
+    }
+    &__item-img--1{
+      margin-right: 15px;
+    }
+    &__item-img--2{
+      margin-left: 15px;
+    }
+    &__title{
+      margin-bottom: 35px;
+    }
+  }
+  .title{
+    font-size: 30px;
+  }
+  .price{
+    padding-top: 60px;
+    margin-bottom: 110px;
+    &__title{
+      margin-bottom: 35px;
+    }
+    &__inner{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item + .price__item{
+      margin-left: 0;
+    }
+    &__item{
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -168,6 +229,23 @@
     &__title{
       max-width: 461px;
       margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .teachers{
+    &__content-box--2{
+      margin-top: 0;
+    }
+  }
+  .price{
+    &__content-price{
+      font-size: 38px;
+      line-height: 50px;
+    }
+    &__item{
+      padding-bottom: 75px;
     }
   }
 }
@@ -193,5 +271,35 @@
       font-size: 27px;
       line-height: 32px;
     }
+  }
+  .teachers{
+    &__content{
+      margin-bottom: 60px;
+    }
+    &__item{
+      flex-direction: column;
+    }
+    &__content-box{
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    &__item-img--2{
+      order: -1;
+      margin-left: auto;
+    }
+  }
+  .title{
+    font-size: 26px;
+  }
+  .blockquote{
+    font-size: 22px;
+    line-height: 28px;
+    &__author{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .price {
+    margin-bottom: 80px;
   }
 }

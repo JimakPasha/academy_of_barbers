@@ -85,6 +85,7 @@
       border: none;
       padding: 0;
       background-color: transparent;
+      cursor: pointer;
       transition: all .3s;
       &::before,
       &::after{
@@ -205,6 +206,9 @@
     }
     &__title{
       margin-bottom: 35px;
+      &::before{
+        width: 255px;
+      }
     }
   }
   .title{
@@ -215,6 +219,9 @@
     margin-bottom: 110px;
     &__title{
       margin-bottom: 35px;
+      &::before{
+        width: 360px;
+      }
     }
     &__inner{
       flex-direction: column;
@@ -232,6 +239,9 @@
     &__inner{
       flex-direction: column;
       align-items: center;
+    }
+    &__title::before{
+      width: 315px;
     }
   }
   .form{
@@ -258,6 +268,9 @@
   .reviews-slider{
     padding-top: 60px;
     margin-bottom: 100px;
+    &__title::before{
+      width: 310px;
+    }
     &__content{
       max-width: 100%;
       margin: 0 20px 20px;
@@ -380,6 +393,9 @@
       order: -1;
       margin-left: auto;
     }
+    &__title::before{
+      width: 225px;
+    }
   }
   .title{
     font-size: 26px;
@@ -394,6 +410,9 @@
   }
   .price {
     margin-bottom: 80px;
+    &__title::before{
+      width: 315px;
+    }
   }
   .address{
     max-width: 200px;
@@ -401,9 +420,15 @@
   }
   .connection{
     padding-bottom: 80px;
+    &__title::before{
+      width: 270px;
+    }
   }
   .reviews-slider{
     margin-bottom: 80px;
+    &__title::before{
+      width: 270px;
+    }
     &__content{
       margin: 0 10px 10px;
       padding: 20px;

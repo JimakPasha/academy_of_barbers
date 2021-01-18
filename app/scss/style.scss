@@ -140,6 +140,9 @@
   padding-top: 130px;
   &__title{
     margin-bottom: 63px;
+    &::before{
+      width: 301px;
+    }
   }
   &__content{
     margin-left: 8%;
@@ -204,6 +207,9 @@
   margin-bottom: 175px;
   &__title{
     margin-bottom: 56px;
+    &::before{
+      width: 442px;
+    }
   }
   &__inner{
     display: flex;
@@ -251,6 +257,7 @@
     font-size: 13px;
     line-height: 16px;
     margin-bottom: 18px;
+    color: $default;
   }
   &__content-price{
     position: absolute;
@@ -270,6 +277,9 @@
   border: 1px solid rgba(152, 144, 132, 0.5);
   &__title{
     margin-bottom: 23px;
+    &::before{
+      width: 382px;
+    }
   }
   &__inner{
     display: flex;
@@ -370,6 +380,9 @@
   margin-bottom: 125px;
   &__title{
     margin-bottom: 67px;
+    &::before{
+      width: 391px;
+    }
   }
   &__item{
     padding-top: 60px;

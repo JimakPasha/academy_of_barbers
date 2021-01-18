@@ -46,10 +46,11 @@
     border: 1px solid #DDCDB4;
     background-color: rgba(0,0,0,0.4);
     outline: none;
+    transition: all .3s;
     &:hover,
     &:focus{
       color: #fff;
-      border: 2px solid #FFFFFF;
+      border-color: #FFFFFF;
       background-color: rgba(255, 255, 255, 0.3);
     }
   }

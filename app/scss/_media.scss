@@ -1,0 +1,418 @@
+@media (max-width: 992px){
+  .header{
+    &__top-inner{
+      justify-content: space-between;
+    }
+  }
+  .logo{
+    margin: 0 0 0 10px;
+  }
+  .menu{
+    margin-right: 15px;
+  }
+  .about{
+    &__content-text{
+      margin-top: 10px;
+    }
+    &__content-text:nth-child(even) {
+      margin-left: auto;
+    }
+  }
+  .teachers{
+    &__item--2{
+      margin-top: 30px;
+    }
+    &__item-img{
+      margin: 0;
+    }    
+    &__item-img--1{
+      margin-right: 20px;
+    }
+    &__item-img--2{
+      margin-left: 20px;
+    }
+  }
+  .price{
+    &__item +.price__item{
+      margin-left: 20px;
+    }
+  }
+  .footer-menu{
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 820px){
+  .address{
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px){
+  .header{
+    &__top{
+    padding: 15px 0 0;
+    }
+    &__content-inner{
+      align-items: center;
+    }
+    &__content-inner.active{
+      opacity: 0; 
+      pointer-events: none;
+    }
+    &__content-title{
+      text-align: center;
+      margin-left: 0;
+      font-size: 60px;
+      line-height: 82px;
+      letter-spacing: 2px;
+      max-width: 677px;
+    }
+    &__content-link{
+      max-width: 280px;
+      padding: 12px 24px;
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+  .menu{
+    &__btn{
+      display: block;
+      z-index: 10;
+      position: relative;
+      width: 40px;
+      height: 26px;
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      transition: all .3s;
+      &::before,
+      &::after{
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        transition: all .3s;
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
+      span{
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #fff;
+        transition: all .3s;
+        position: relative;
+      }
+      &:hover,
+      &:focus{
+        outline: none;
+        transform: scale(1.1);
+      }
+    }
+    &__btn.active{
+      transition: all .3s;
+      &::before{
+        transform: rotate(-45deg);
+        top: 12px;
+      }
+      &::after{
+        transform: rotate(45deg);
+        bottom: 12px;
+      }
+      span{
+        transform: scale(0);
+      }
+    }
+    &__list{
+      position: absolute;
+      display: block;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      left: 0;
+      padding-top: 140px;
+      background-color: #774E36;
+      z-index: 5;
+      transform: translateY(-200%) scale(0);
+      transition: all .3s;
+      &.active{
+      transform: translateY(0%) scale(1);
+      }
+    }
+    &__list-item+.menu__list-item {
+    margin-left: 0;
+    }
+    &__list-link{
+      padding: 40px 0;
+      display: block;
+      width: 100%;
+      &:hover,
+      &:focus{
+        border-bottom: none;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .about{
+    padding-top: 60px;
+    &__content-text{
+      margin-top: 20px;
+    }
+    &__title{
+      font-size: 52px;
+      line-height: 56px;
+    }
+    &__subtitle{
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    &__content{
+      margin-bottom: 60px;
+    }
+    &__slogan{
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+  .teachers{
+    padding-top: 60px;
+    &__content{
+      margin-left: 0;
+      margin-bottom: 100px;
+    } 
+    &__content-box--2{
+      margin-top: 40px;
+    }
+    &__item{
+      margin-left: 0;
+    }    
+    &__item-img{
+      width: 50%;
+    }
+    &__item-img--1{
+      margin-right: 15px;
+    }
+    &__item-img--2{
+      margin-left: 15px;
+    }
+    &__title{
+      margin-bottom: 35px;
+    }
+  }
+  .title{
+    font-size: 30px;
+  }
+  .price{
+    padding-top: 60px;
+    margin-bottom: 110px;
+    &__title{
+      margin-bottom: 35px;
+    }
+    &__inner{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item + .price__item{
+      margin-left: 0;
+    }
+    &__item{
+      margin-bottom: 30px;
+    }
+  }
+  .connection{
+    padding: 60px 0 100px;
+    &__inner{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .form{
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 100px;
+    & button{
+      bottom: -60px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  .contacts{
+    width: 80%;
+    max-width: 100%;
+    text-align: center;
+    &__inner{
+      padding-right: 36px;
+    }
+  }
+  .address{
+    max-width: 100%;
+  }
+  .reviews-slider{
+    padding-top: 60px;
+    margin-bottom: 100px;
+    &__content{
+      max-width: 100%;
+      margin: 0 20px 20px;
+      padding: 30px;
+      background-color: rgba(0,0,0,0.81);
+    }
+    &__author{
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media (max-width: 710px){
+  .footer{
+    background-size: 12%;
+  }
+  .footer-menu{
+    &__list-item+.footer-menu__list-item {
+    margin-left: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .about{
+    &__content-text:nth-child(odd),
+    &__content-text:nth-child(even){
+      text-align: center;
+    }
+    &__title{
+      max-width: 461px;
+      margin: 0 auto;
+    }
+  }
+  .contacts{
+    width: 100%;
+  }
+  .footer-menu{
+    &__list-item+.footer-menu__list-item {
+    margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .teachers{
+    &__content-box--2{
+      margin-top: 0;
+    }
+  }
+  .price{
+    &__content-price{
+      font-size: 38px;
+      line-height: 50px;
+    }
+    &__item{
+      padding-bottom: 75px;
+    }
+  }
+  .footer-menu{
+    &__list{
+      display: block;
+      text-align: center;
+    }
+    &__list-item+.footer-menu__list-item {
+      margin-left: 0;
+    }
+    &__list-item{
+      margin-bottom: 8px;
+    }
+  }
+  .footer{
+    background-position: 50% 42%;
+    &__inner{
+      margin-top: 100px;
+      flex-direction: column;
+      text-align: center;
+    }
+    &__contacts{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 490px){
+  .header{
+    &__content-title{
+      font-size: 48px;
+      line-height: 62px;
+    }
+    &__content-link{
+      padding: 10px 21px;
+      font-size: 27px;
+      line-height: 29px;
+    }
+  }
+  .about{
+    &__content-text{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__slogan{
+      font-size: 27px;
+      line-height: 32px;
+    }
+  }
+  .teachers{
+    &__content{
+      margin-bottom: 60px;
+    }
+    &__item{
+      flex-direction: column;
+    }
+    &__content-box{
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    &__item-img--2{
+      order: -1;
+      margin-left: auto;
+    }
+  }
+  .title{
+    font-size: 26px;
+  }
+  .blockquote{
+    font-size: 22px;
+    line-height: 28px;
+    &__author{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .price {
+    margin-bottom: 80px;
+  }
+  .address{
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .connection{
+    padding-bottom: 80px;
+  }
+  .reviews-slider{
+    margin-bottom: 80px;
+    &__content{
+      margin: 0 10px 10px;
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 370px){
+  .footer{
+    background-size: 17%;
+  }
+}

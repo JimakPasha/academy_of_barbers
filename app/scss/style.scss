@@ -19,6 +19,9 @@
   }
   &__content-inner{
     min-height: calc(100vh - 234px);
+    display: flex;
+    flex-direction: column;
+
   }
   &__content-title{
     margin-left: 86px;
@@ -29,20 +32,19 @@
     color: #fff;
     @extend %cormorantunicase-600;
     max-width: 817px;
-    margin-bottom: 148px;
+    margin-bottom: auto;
   }
   &__content-link{
     max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
+    align-self: center;
+    margin-bottom: auto;
     padding: 18px 50px;
     font-size: 45px;
     line-height: 54px;
     text-transform: uppercase;
     color: #DDCDB4;
     border: 1px solid #DDCDB4;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0,0,0,0.4);
     outline: none;
     &:hover,
     &:focus{
@@ -56,18 +58,12 @@
 .logo{
   outline: none;
   margin: 0 234px 0 10px;
+  z-index: 10;
 }
 
 .menu{
   &__list{
     display: flex;
-  }
-  &__list-item{
-    padding: 0 6px;
-    transition: all .3s;
-    &:hover{
-      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    }
   }
   &__list-item + .menu__list-item{
     margin-left: 33px;
@@ -77,10 +73,16 @@
     font-size: 24px;
     line-height: 28px;
     color: #fff;
-    &:focus{
+    padding: 0 6px;
+    transition: all .3s;
+    &:focus,
+    &:hover{
       outline: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     }
+  }
+  &__btn{
+    display: none;
   }
 }
 
@@ -149,12 +151,16 @@
   }
   &__item{
     display: flex;
+    margin-left: 30px;
+  }
+  &__item--2{
+    margin-top: -75px;
   }
   &__item-img{
-    margin: 0 63px 0 30px;
+    margin: 0 30px 0 30px;
     max-width: 335px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   &__content-box{
     max-width: 395px;
@@ -184,6 +190,7 @@
   text-transform: uppercase;
   font-size: 30px;
   line-height: 36px;
+  border: 1px solid rgba(152, 144, 132, 0.5);
   &__author{
     display: block;
     @extend %raleway-200;
@@ -203,6 +210,7 @@
     justify-content: space-around;
   }
   &__item{
+    display: block;
     transition: all .3s;
     text-align: center;
     background-color: #FCFAF7;
@@ -211,7 +219,9 @@
     border: 1px solid rgba(152, 144, 132, 0.5);
     border-top: none;
     position: relative;
-    &:hover{
+    outline: none;
+    &:hover,
+    &:focus{
       transform: scale(1.1);
       box-shadow: 0px 0px 18px -8px #000000;
     }
@@ -250,6 +260,7 @@
     bottom: 20px;
     right: 50%;
     transform: translateX(50%);
+    color: $default;
   }
 }
 
@@ -341,9 +352,11 @@
   display: block;
   color: #242121;
   margin-bottom: 26px;
+  transition: all .3s;
   &:focus{
     outline: none;
     color: rgba(36,33,33,0.6);
+    transform: scale(1.1);
   }
 }
 
@@ -440,9 +453,11 @@
   &__phone{
     display: block;
     margin-bottom: 21px;
+    transition: all .3s;
     &:focus{
       outline: none;
       color: rgba(250, 247, 242, 0.9);
+      transform: scale(1.1);
     }
   }
 }

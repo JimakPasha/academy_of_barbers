@@ -40,12 +40,13 @@
     margin-bottom: auto;
     padding: 18px 50px;
     font-size: 45px;
-    line-height: 54px;
+    line-height: 1;
     text-transform: uppercase;
     color: #DDCDB4;
     border: 1px solid #DDCDB4;
     background-color: rgba(0,0,0,0.4);
     outline: none;
+    @extend %cormorantunicase-600;
     transition: all .3s;
     &:hover,
     &:focus{
@@ -483,7 +484,7 @@
     @extend %cormorantunicase-600;
   }
   &__list-item +.footer-menu__list-item{
-    margin-left: 80px;
+    margin-left: 126px;
   }
   &__list-link{
     padding: 0 3px;
@@ -500,24 +501,27 @@
 }
 
 .social{
-  &__facebook:hover,
-  &__facebook:focus{
+  &__link+.social__link{
+    margin-left: 15px;
+  }
+  &__link--facebook:hover,
+  &__link--facebook:focus{
     outline: none;
     ellipse{
       transition: all .3s;
       fill: #4E6297;
     }
   }
-  &__vk:hover,
-  &__vk:focus{
+  &__link--vk:hover,
+  &__link--vk:focus{
     outline: none;
     ellipse{
       transition: all .3s;
       fill: #7294C7;
     }
   }
-  &__instagram:hover,
-  &__instagram:focus{
+  &__link--instagram:hover,
+  &__link--instagram:focus{
     outline: none;
     ellipse{
       fill: url(#paint0_linear);

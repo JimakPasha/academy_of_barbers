@@ -39,6 +39,9 @@
   }
   .footer-menu{
     margin-right: 0;
+    &__list-item +.footer-menu__list-item{
+      margin-left: 80px;
+    }
   }
 }
 
@@ -145,6 +148,7 @@
       transition: all .3s;
       &.active{
       transform: translateY(0%) scale(1);
+      height: 100vh;
       }
     }
     &__list-item+.menu__list-item {
@@ -439,5 +443,26 @@
 @media (max-width: 370px){
   .footer{
     background-size: 17%;
+  }
+}
+
+
+
+@media (max-height: 695px){
+  .header{
+    &__content-inner{
+      min-height: calc(100vh - 176px);
+    }
+    &__top{
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media (max-height: 625px){
+    .header{
+    &__content-inner{
+      min-height: 100vh;
+    }
   }
 }

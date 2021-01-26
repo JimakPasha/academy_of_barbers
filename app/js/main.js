@@ -1,7 +1,7 @@
 $(function () {
 
   $('.menu__btn').on('click', function(){
-    $('.menu__list,.menu__btn,.header__content-inner').toggleClass('active');
+    $('.menu__list,.menu__btn,.header,.header__content-inner').toggleClass('active');
   });
 
   $('.menu a').on('click', function (e) {
@@ -13,9 +13,8 @@ $(function () {
   
   $('.reviews-slider__items').slick({
     dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3500
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/arrow-left.svg" alt="стрелка-назад"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/arrow-right.svg" alt="стрелка-вперёд"></button>'
   });
 
 });

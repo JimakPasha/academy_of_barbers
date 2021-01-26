@@ -53,6 +53,9 @@
 
 @media (max-width: 768px){
   .header{
+    &.active{
+      background-image: none;
+    }
     &__top{
     padding: 15px 0 0;
     }
@@ -147,8 +150,8 @@
       transform: translateY(-200%) scale(0);
       transition: all .3s;
       &.active{
-      transform: translateY(0%) scale(1);
-      height: 100vh;
+        transform: translateY(0%) scale(1);
+        min-height: 100vh;
       }
     }
     &__list-item+.menu__list-item {
@@ -185,6 +188,7 @@
     &__slogan{
       font-size: 34px;
       line-height: 40px;
+      padding-bottom: 60px;
     }
   }
   .teachers{
@@ -209,7 +213,7 @@
       margin-left: 15px;
     }
     &__title{
-      margin-bottom: 35px;
+      margin-bottom: 60px;
       &::before{
         width: 255px;
       }
@@ -220,9 +224,9 @@
   }
   .price{
     padding-top: 60px;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
     &__title{
-      margin-bottom: 35px;
+      margin-bottom: 60px;
       &::before{
         width: 360px;
       }
@@ -239,13 +243,16 @@
     }
   }
   .connection{
-    padding: 60px 0 100px;
+    padding: 60px 0 60px;
     &__inner{
       flex-direction: column;
       align-items: center;
     }
-    &__title::before{
-      width: 315px;
+    &__title{
+      margin-bottom: 60px;
+      &::before{
+        width: 315px;
+      }
     }
   }
   .form{
@@ -272,8 +279,11 @@
   .reviews-slider{
     padding-top: 60px;
     margin-bottom: 100px;
-    &__title::before{
-      width: 310px;
+    &__title{
+      margin-bottom: 60px;
+      &::before{
+        width: 310px;
+      }
     }
     &__content{
       max-width: 100%;
@@ -285,6 +295,9 @@
       font-size: 22px;
       line-height: 28px;
     }
+  }
+  .slick-arrow{
+    display: none;
   }
 }
 

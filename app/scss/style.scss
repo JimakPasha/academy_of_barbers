@@ -107,7 +107,7 @@
     @extend %raleway-400;
     font-size: 36px;
     line-height: 43px;
-    margin-bottom: 77px;
+    margin-bottom: 139px;
     text-align: center;
   }
   &__content{
@@ -134,14 +134,14 @@
     line-height: 51px;
     max-width: 815px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding-bottom: 130px;
   }
 }
 
 .teachers{
   padding-top: 130px;
   &__title{
-    margin-bottom: 63px;
+    margin-bottom: 130px;
     &::before{
       width: 301px;
     }
@@ -190,7 +190,7 @@
 .blockquote{
   background-color: #FAF7F2;
   text-align: center;
-  padding: 48px 0;
+  padding: 48px 10px;
   @extend %cormorantunicase-300;
   text-transform: uppercase;
   font-size: 30px;
@@ -206,9 +206,9 @@
 
 .price{
   padding-top: 100px;
-  margin-bottom: 175px;
+  margin-bottom: 130px;
   &__title{
-    margin-bottom: 56px;
+    margin-bottom: 100px;
     &::before{
       width: 442px;
     }
@@ -275,10 +275,10 @@
 
 .connection{
   background-color: #FCFAF7;
-  padding: 95px 0 178px;
+  padding: 130px 0 192px;
   border: 1px solid rgba(152, 144, 132, 0.5);
   &__title{
-    margin-bottom: 23px;
+    margin-bottom: 130px;
     &::before{
       width: 382px;
     }
@@ -381,7 +381,7 @@
   padding-top: 100px;
   margin-bottom: 125px;
   &__title{
-    margin-bottom: 67px;
+    margin-bottom: 100px;
     &::before{
       width: 391px;
     }
@@ -414,6 +414,29 @@
       margin-top: 23px;
     }
   }
+}
+
+.slick-arrow{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 24px);
+  transform: translateY(-50%);
+  outline: none;
+  transition: all .3s;
+  &:focus{
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+.slick-prev{
+  left: 20px;
+  z-index: 10;
+}
+
+.slick-next{
+  right: 20px;
 }
 
 .slick-dots{

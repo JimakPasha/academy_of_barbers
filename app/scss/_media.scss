@@ -297,7 +297,7 @@
     }
   }
   .slick-arrow{
-    display: none;
+    z-index: -1;
   }
 }
 

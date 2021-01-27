@@ -428,6 +428,9 @@
   &:focus{
     transform: translateY(-50%) scale(1.1);
   }
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .slick-prev{
